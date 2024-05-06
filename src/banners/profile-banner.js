@@ -5,6 +5,8 @@
  */
 
 import { Banner } from '../common/Banner.js'
+import { createTextDates } from '../common/createTextDates.js'
+
 
 /**
  * Retrieves the text elements with profile data
@@ -43,7 +45,10 @@ const getTextsElements = (profile, size) => {
         >
             <tspan x="0" y="50">@${profile.username}</tspan>
         </text>
+
+        ${createTextDates(profile.created_at, profile.last_login)}
     </g>
+    <circle xmlns="http://www.w3.org/2000/svg" fill="white" cx="915" cy="530" r="3.5"/>
     `
 }
 
@@ -75,6 +80,17 @@ export async function createProfileBanner(profile, options) {
             font-family: Poppins-Regular, Poppins;
             font-size: 31px;
             fill: #ccc;
+        }
+        .text_date {
+            font-family: Poppins-Regular, Poppins;
+            font-size: 24px;
+            fill: #bbb;
+        }
+        .date {
+            font-family: Poppins-Medium, Poppins;
+            font-weight: 500;
+            font-size: 24px;
+            fill: white;
         }
     `)
         
