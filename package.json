@@ -1,0 +1,10 @@
+{
+  "main": "./src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index"
+  },
+  "dependencies": {
+    "sharp": "^0.33.3"
+  }
+}
