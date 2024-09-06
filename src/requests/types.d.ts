@@ -1,10 +1,13 @@
 export interface ProfileData {
+    id: string;
     name: string;
     username: string;
-    avatar_url: string;
-    banner_url: string | null;
+    avatar: string;
+    banner: string | null;
+    bio: string;
     badges: string[];
     premium: boolean;
-    created_at: Date;
+    location: string;
     last_login: Date;
+    created_at: Date;
 }

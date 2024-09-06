@@ -1,7 +1,7 @@
 // @ts-check
 /**
- * @typedef {import("../requests/types").ProfileData} ProfileData
- * @typedef {import("./types").ProfileOptions} ProfileOptions
+ * @typedef {import('../requests/types').ProfileData} ProfileData
+ * @typedef {import('./types').ProfileOptions} ProfileOptions
  */
 
 import { Banner } from '../common/Banner.js'

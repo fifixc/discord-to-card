@@ -1,4 +1,5 @@
 // @ts-check
+import 'dotenv/config'
 import { createProfileBanner } from './banners/index.js'
 import { fetchProfile } from './requests/index.js'
 import { toImage } from './common/toImage.js'
@@ -22,11 +23,3 @@ export async function getProfile(token, options = {}) {
         const image = await toImage(Buffer.from(banner))
         return image
 }
-
-
-// example usage
-/*
-getProfile(process.env.DISCORD_TOKEN, {
-    showBadges: false
-})
-*/

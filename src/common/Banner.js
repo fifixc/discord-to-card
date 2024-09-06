@@ -1,24 +1,25 @@
 // @ts-check
+
+/** @typedef {import('../banners/types').BannerOptions} BannerOptions */
+
 export class Banner {
     /**
      * Instance a Banner class.
      * 
-     * @param {Object} options - Banner options.
-     * @param {number} [options.width] - Banner width.
-     * @param {number} [options.height] - Banner height.
-     * @param {string} [options.backgroundColor] - Banner background color.
+     * @param {BannerOptions} options - Banner options.
      */
     constructor({ 
         width = 1830,
         height = 700,
-        backgroundColor = 'black'
+        backgroundColor = 'black',
+        borderColor = '#232323',
+        borderRadius = 15
     } = {}) {
         this.width = width
         this.height = height
         this.backgroundColor = backgroundColor
-
-        this.borderColor = '#232323'
-        this.borderRadius = 15
+        this.borderColor = borderColor
+        this.borderRadius = borderRadius
         this.borderSize = 1
         this.css = ''
     }
